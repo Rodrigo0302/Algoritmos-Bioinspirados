@@ -6,21 +6,24 @@ from matplotlib.colors import ListedColormap
 
 
 # Parámetros de la simulación
-num_rows = 10  # Tamaño de la cuadrícula
-num_cols = 80
+num_rows = 30  # Tamaño de la cuadrícula
+num_cols = 130
 nr = 3         # Número de pasos que una célula permanece refractaria
-c = 0.1        # Umbral promedio (reducido)
+c = 0.13        # Umbral promedio (reducido)
 delta_c = 0.05 # Variación del umbral
-R = 2          # Radio de influencia
+R = 1        # Radio de influencia
 w0 = 0.1       # Peso direccional fuerte hacia la derecha
 
 # Estados de las células: 0 = inactiva, 1 = activa, 2 a nr+1 = refractaria
 grid = np.zeros((num_rows, num_cols), dtype=int)
 
 # Iniciar con un punto activado
-grid[5, 0] = 1
-grid[6, 0] = 1
-grid[7, 0] = 1
+grid[10, 0] = 1
+grid[11, 0] = 1
+grid[12, 0] = 1
+grid[13, 0] = 1
+grid[14, 0] = 1
+grid[15, 0] = 1
 
 # Definir el mapa de colores: cada número representa un estado específico
 cmap = ListedColormap(['black', 'red', 'orange', 'yellow', 'green'])  # Colores para inactivo, activo y diferentes estados refractarios
